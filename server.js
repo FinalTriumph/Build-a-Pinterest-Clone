@@ -4,6 +4,7 @@ var session = require("express-session");
 var mongourl = process.env.MONGOLAB_URI || "mongodb://localhost:27017/data";
 var passport = require("passport");
 var mongoose = require("mongoose");
+var bodyParser = require("body-parser");
 var routes = require("./routes/index.js");
 
 require("dotenv").load();
@@ -23,6 +24,9 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 routes(app, passport);
 

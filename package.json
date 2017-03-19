@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "Pinterest Clone",
   "main": "index.js",
+  "engines": {
+    "node": "4.7.3",
+    "npm": "2.15.11"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "FinalTriumph",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
     "express-session": "^1.15.1",

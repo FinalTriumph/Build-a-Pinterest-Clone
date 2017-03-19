@@ -1,0 +1,34 @@
+<head>
+    <link rel="stylesheet" href="/public/css/main.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <title>My Images</title>
+</head>
+
+<body>
+    <div id="head">
+        <h1>Simple Pinterest Clone</h1>
+        <a href="/"><button class="headBtn">All Images</button></a>
+        <a href="/myimages"><button class="headBtn" id="activeHeadBtn">My Images</button></a>
+        <button class="headBtn" id="displayName"></button>
+        <a href="/twitter-logout"><button class="headBtn">Sign Out</button></a>
+    </div>
+    <button id="addImageBtn">Add Image</button><br>
+    <div class="grid"></div><br>
+    <div id="popup">
+        <form id="newImageForm">
+            <button type="button" class="xbtn">x</button><br>
+            <p1>Image URL:</p1><br>
+            <input type="text" name="imageURL"></input><br>
+            <p5 id="urlError"></p5><br>
+            <p1>Title:</p1><br>
+            <input type="text" name="title"></input><br>
+            <p5 id="titleError"></p5><br>
+            <button type="button" id="submitImage">Submit</button>
+        </form>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="controllers/getusername.js"></script>
+<script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="controllers/myimages.js"></script>
