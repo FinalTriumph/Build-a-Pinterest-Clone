@@ -15,3 +15,10 @@ $.get(window.location.origin + "/allimages", function(data) {
         $grid.append( $content ).masonry("appended", $content);
     }
 });
+
+
+$('.grid').imagesLoaded( function() {
+    setTimeout(function() {
+        $grid.masonry('layout');
+    }, 500);
+});

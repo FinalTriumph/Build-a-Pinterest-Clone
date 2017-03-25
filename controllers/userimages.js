@@ -18,3 +18,9 @@ $.get(window.location.origin + "/userimages/" + username, function(data) {
     }
     document.title = data[0].image.name;
 });
+
+$('.grid').imagesLoaded( function() {
+    setTimeout(function() {
+        $grid.masonry('layout');
+    }, 500);
+});

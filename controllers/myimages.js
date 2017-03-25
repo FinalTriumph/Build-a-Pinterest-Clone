@@ -77,3 +77,9 @@ $("input[name=imageURL], input[name=title]").keypress(function(e) {
         $("#submitImage").click();
     }
 });
+
+$('.grid').imagesLoaded( function() {
+    setTimeout(function() {
+        $grid.masonry('layout');
+    }, 500);
+});
